@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <style>
+      .main {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .left {
+        padding: 10px;
+        flex: 1;
+        background-color: darkolivegreen;
+      }
+
+      .right {
+        padding: 10px;
+        flex: 1;
+        background-color: darkslateblue;
+      }
+    </style>
+  </head>
+  <body id="exercise">
+  <div style="user-select: none;">
+    Value <span>0</span>
+  </div>
+    </main>
+    <script>
+    // IIFE (Immediately Invoke Function Expression)
+
+    (function () {
+       function increase(){
+        const span = document.querySelector('div > span')
+        const newValue = +span.innerHTML + 1
+        span.innerHTML = newValue
+      }
+
+      const div = document.querySelector('div')
+      div.onclick = increase
+    })()
+
+     
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body id="exercise">
+    <div id="first">#first</div>
+    <div id="second" class="highlight">#second</div>
+    <div id="third">#third</div>
+    <div id="forth" class="highlight">#forth</div>
+    <div id="fifth" class="last">#fifth</div>
+    <script>
+      // HTML Collection
+      const highlight = document.getElementsByClassName('highlight');
+      highlight[1].classList.remove('highlight');
+
+      const last = document.getElementsByClassName('last');
+      last[0].classList.add('highlight');
+    </script>
+  </body>
+</html>

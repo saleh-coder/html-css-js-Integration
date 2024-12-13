@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body id="exercise">
+    <div id="first">#first</div>
+    <div id="second">#second</div>
+    <div id="third">#third</div>
+    <div id="forth">#forth</div>
+    <div id="fifth">#fifth</div>
+    <script>
+      // HTMLCollection (NOT array!)
+      const divs = document.getElementsByTagName('div');
+      //console.log(divs instanceof HTMLCollection);
+
+      // Loop #01 - add highlight class to the elements
+      for (const element of divs) {
+        element.classList.add('highlight');
+      }
+
+      // // Loop #02 - remove highlight class to ALL the elements
+      // const array1 = Array.from(divs);
+      // array1.forEach((el, i) => {
+      //   el.classList.remove('highlight');
+      // });
+
+      // Loop #03 - remove the highlight class from all elements at odd indices
+      // const array1 = Array.from(divs);
+      Array.from(divs).forEach((el, i) => {
+        if (i % 2 === 1) {
+          el.classList.remove('highlight');
+        }
+      });
+
+      // Loop #03
+      const array = [...divs]
+      array.forEach((el, i) => {
+        const last = array.length - 1 === i
+
+        if(last) {
+          el.classList.remove('highlight')
+        }
+      })
+    </script>
+  </body>
+</html>

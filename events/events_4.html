@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <style>
+      .main {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .left {
+        padding: 10px;
+        flex: 1;
+        background-color: darkolivegreen;
+      }
+
+      .right {
+        padding: 10px;
+        flex: 1;
+        background-color: darkslateblue;
+      }
+    </style>
+  </head>
+  <body id="exercise">
+    <main class="main">
+      <section class="left" web-dropzone>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+      </section>
+
+      <section class="right" web-dropzone></section>
+    </main>
+    <script>
+      const items = document.querySelectorAll('[web-dropzone] .item');
+      items.forEach((item, index) => {
+        item.draggable = true;
+        item.id = item.id || `draggable-item-${index}`;
+
+        item.ondragstart = function (event) {
+          event.dataTransfer.setData('itemId', event.target.id);
+          // console.log(event.target.id);
+        };
+      });
+
+      const dropzone = document.querySelectorAll('[web-dropzone]');
+      dropzone.forEach((dropzone) => {
+        dropzone.ondragover = (e) => e.preventDefault();
+
+        dropzone.ondrop = function (event) {
+          const itemId = event.dataTransfer.getData('itemId');
+          const item = document.getElementById(itemId);
+          // event.target.appendChild(item)
+          dropzone.appendChild(item);
+        };
+      });
+    </script>
+  </body>
+</html>

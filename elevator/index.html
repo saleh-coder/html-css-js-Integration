@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Elevator</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/street.js" defer></script>
+    <script src="./js/building.js" defer></script>
+  </head>
+  <body>
+    <div class="controls">
+      <div class="dial">Ground Floor</div>
+      <button data-floor="G">G</button>
+      <button data-floor="1">1</button>
+      <button data-floor="2">2</button>
+      <button data-floor="3">3</button>
+      <button data-floor="4">4</button>
+      <button data-floor="5">5</button>
+      <button data-floor="6">6</button>
+    </div>
+
+    <div class="sidewalk">
+      <div class="tree"></div>
+      <div class="building">
+        <div class="column" floors="6"></div>
+        <div class="pit"></div>
+        <div class="column" floors="6"></div>
+      </div>
+      <div class="tree"></div>
+    </div>
+    <div class="street" tracks="15"></div>
+  </body>
+</html>

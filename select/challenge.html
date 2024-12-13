@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body id="exercise">
+    <main class="column">
+      <p>Paragraph #01</p>
+
+      <article>Paragraph #02</article>
+
+      <p>Paragraph #03</p>
+
+      <article>Paragraph #04</article>
+
+      <article>Paragraph #05</article>
+    </main>
+    <script>
+      // Select all <p> elements on the page
+      const paragraphs = document.querySelectorAll('p');
+
+      // For each paragraph, check if it's not inside an <article>
+      paragraphs.forEach((p) => {
+        // If the paragraph is NOT inside an <article>
+        if (!p.closest('article')) {
+          // 1. Add the text "[Out]" at the beginning of the content
+          p.textContent = `[Out] ${p.textContent}`;
+
+          // 2. Add the class "highlight"
+          p.classList.add('highlight');
+        }
+      });
+    </script>
+  </body>
+</html>

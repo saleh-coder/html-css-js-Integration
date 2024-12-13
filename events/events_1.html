@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body id="exercise">
+    <main class="column">
+      <div id="result" onclick="clear()" style="cursor: pointer">???</div>
+      <button onclick="yes()">Yes</button>
+      <button onclick="no()">No</button>
+    </main>
+    <script>
+      const div = document.querySelector('#result');
+
+      function clear() {
+        div.innerHTML = '???';
+      }
+
+      function yes() {
+        div.innerHTML = 'Yes';
+      }
+
+      function no() {
+        div.innerHTML = 'No';
+      }
+    </script>
+  </body>
+</html>

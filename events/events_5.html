@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <style>
+      .main {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .left {
+        padding: 10px;
+        flex: 1;
+        background-color: darkolivegreen;
+      }
+
+      .right {
+        padding: 10px;
+        flex: 1;
+        background-color: darkslateblue;
+      }
+    </style>
+  </head>
+  <body id="exercise">
+    <main class="column">
+      <h1>Form</h1>
+
+      <form class="column">
+        <input type="text" name="q" placeholder="Type the term..." />
+
+        <select name="hl" id="">
+          <option value="en-gb">English (Britain)</option>
+          <option value="en-us">English (United States)</option>
+        </select>
+
+        <button web-submit>Search</button>
+      </form>
+    </main>
+    <script>
+      function submit(event) {
+        event.preventDefault();
+
+        const form = event.target;
+        const formData = new FormData(form); // Nome alterado para evitar conflitos
+        formData.append('safe', true);
+        console.log('Search Term:', formData.get('q'));
+        console.log('Language:', formData.get('hl'));
+        console.log(formData.get('safe'));
+
+        // Corrigido: Renomeado para evitar conflito de nomes
+        for (let [key, value] of formData.entries()) {
+          console.log(key, value);
+          window.location.href = `https://google.com/search?q=${formData.get('q')}&hl=${formData.get('hl')}`;
+        }
+      }
+
+      // const buttons = document.querySelectorAll('[web-submit]');
+      // buttons.forEach((el) => (el.onclick = submit));
+
+      const form = document.forms[0];
+      form.onsubmit = submit;
+    </script>
+  </body>
+</html>

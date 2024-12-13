@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body id="exercise">
+    <main class="column">
+      <label for="shopping">Shopping</label>
+      <ul id="shopping" delivery="office" urgent-date="5">
+        <li>Water</li>
+        <li>Coffee</li>
+        <li>Plastic cup</li>
+      </ul>
+    </main>
+    <script>
+      const list = document.querySelector('#shopping');
+
+      // lecture only
+      console.log(list.attributes);
+      console.log(list.attributes[0]);
+      console.log(list.attributes.id)
+      console.log(list.attributes[1]);
+      console.log(list.attributes.delivery)
+      console.log(list.attributes[2]);
+      console.log(list.attributes['urgent-date'])
+    </script>
+  </body>
+</html>

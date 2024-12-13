@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body id="exercise">
+    <main class="column">
+      <label for="shopping">Shopping</label>
+      <ul id="shopping" delivery="office" urgent-date="5">
+        <li>Water</li>
+        <li>Coffee</li>
+        <li>Plastic cup</li>
+      </ul>
+    </main>
+    <script>
+      // Select the <ul> element with the attribute delivery="office"
+      const list = document.querySelector('main ul[delivery="office"]');
+
+      // Display the child nodes of the <ul> element
+      console.log('nodeList', list.childNodes);
+
+      // Access the "delivery" attribute using getAttribute
+      console.log('delivery #1', list.getAttribute('delivery'));
+
+      // Check if the "delivery" attribute exists
+      console.log('hasAttribute', list.hasAttribute('delivery'));
+
+      // Set new attributes
+      list.setAttribute('delivery', 'office'); // Reassign "delivery" (okay but redundant)
+      list.setAttribute('status', 'open'); // Add a "status" attribute
+
+      // Remove the "status" attribute
+      list.removeAttribute('status'); // Corrected to only pass the attribute name
+
+      // Access the "urgent-date" attribute
+      console.log('urgent-date', list.getAttribute('urgent-date'));
+
+      // Update the "urgent-date" attribute using setAttribute
+      list.setAttribute('urgent-date', '9');
+      console.log('urgent-date updated', list.getAttribute('urgent-date'));
+
+      // Careful!!!
+      const label = document.querySelector('label');
+      console.log('for #1', label.htmlFor);
+      console.log('for #2', label.getAttribute('for'));
+      console.log('for #3', label.getAttribute('htmlFor'));
+    </script>
+  </body>
+</html>

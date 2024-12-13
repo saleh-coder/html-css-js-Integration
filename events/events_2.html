@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body id="exercise">
+    <div>
+      <a wait="3" href="https://google.com">Google</a>
+    </div>
+    <div>
+      <a wait="6" href="https://yahoo.com">Yahoo</a>
+    </div>
+    <script>
+      function navigate(event) {
+        event.preventDefault();
+
+        const link = event.target;
+        const seconds = +link.getAttribute('wait');
+
+        setTimeout(() => {
+          window.location.href = link.href;
+        }, seconds * 1000);
+      }
+
+      const linksToExpect = document.querySelectorAll('a[wait]');
+      linksToExpect.forEach((link) => (link.onclick = navigate));
+    </script>
+  </body>
+</html>

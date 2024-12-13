@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body id="exercise">
+    <div style="user-select: none">element</div>
+    <script>
+      // Transformando o div de block pra absolute, para movermos a div dentro do browser
+      const div = document.querySelector('div');
+      div.style.position = 'absolute';
+
+      div.onmousemove = function (event) {
+        const item = event.target;
+        item.style.cursor = 'move';
+
+        if (event.buttons) {
+          item.style.top = event.clientY - item.clientHeight / 2;
+          item.style.left = event.clientX - item.clientWidth / 2;
+        }
+      };
+    </script>
+  </body>
+</html>

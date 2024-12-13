@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/menu.css" />
+    <title>Challenge</title>
+  </head>
+  <body id="exercise">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Lines will be inserted here via JavaScript -->
+      </tbody>
+    </table>
+
+    <script>
+      const students = [
+        { name: 'Anne', score: 8.1 },
+        { name: 'Linda', score: 9.3 },
+        { name: 'Carl', score: 7.7 },
+        { name: 'Daniel', score: 8.9 },
+        { name: 'Julia', score: 8.5 },
+      ];
+
+      const tbody = document.querySelector('tbody');
+
+      students.forEach((student) => {
+        const columnName = document.createElement('td');
+        columnName.innerHTML = student.name;
+
+        const columnScore = document.createElement('td');
+        columnScore.innerHTML = student.score;
+
+        const row = document.createElement('tr');
+        row.appendChild(columnName);
+        row.appendChild(columnScore);
+
+        tbody.appendChild(row);
+      });
+    </script>
+  </body>
+</html>

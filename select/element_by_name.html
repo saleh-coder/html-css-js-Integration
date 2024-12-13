@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body id="exercise">
+    <main class="column">
+      <h1 class="h1">Google Search</h1>
+      <form name="formGoogle" action="https://www.google.com/search" class="column">
+        <!-- q=Linux (query)-->
+        <input type="text" name="q" placeholder="Search Google or type a URL" />
+        <!-- hl (host language) -->
+        <select name="hl">
+          <!-- English -->
+          <option value="en-US">English (United States)</option>
+          <option value="en-GB">English (United Kingdom)</option>
+          <option value="en-CA">English (Canada)</option>
+          <option value="en-AU">English (Australia)</option>
+          <option value="en-IN">English (India)</option>
+
+          <!-- Spanish -->
+          <option value="es-ES">Spanish (Spain)</option>
+          <option value="es-MX">Spanish (Mexico)</option>
+          <option value="es-AR">Spanish (Argentina)</option>
+          <option value="es-CL">Spanish (Chile)</option>
+          <option value="es-CO">Spanish (Colombia)</option>
+
+          <!-- Portuguese -->
+          <option value="pt-BR">Portuguese (Brazil)</option>
+          <option value="pt-PT">Portuguese (Portugal)</option>
+
+          <!-- French -->
+          <option value="fr-FR">French (France)</option>
+          <option value="fr-CA">French (Canada)</option>
+          <option value="fr-BE">French (Belgium)</option>
+
+          <!-- Arabic -->
+          <option value="ar-SA">Arabic (Saudi Arabia)</option>
+          <option value="ar-EG">Arabic (Egypt)</option>
+          <option value="ar-AE">Arabic (United Arab Emirates)</option>
+          <option value="ar-MA">Arabic (Morocco)</option>
+          <option value="ar-DZ">Arabic (Algeria)</option>
+
+          <!-- German -->
+          <option value="de-DE">German (Germany)</option>
+          <option value="de-CH">German (Switzerland)</option>
+          <option value="de-AT">German (Austria)</option>
+
+          <!-- Italian -->
+          <option value="it-IT">Italian (Italy)</option>
+          <option value="it-CH">Italian (Switzerland)</option>
+
+          <!-- Russian -->
+          <option value="ru-RU">Russian (Russia)</option>
+
+          <!-- Chinese -->
+          <option value="zh-CN">Chinese (Simplified)</option>
+          <option value="zh-TW">Chinese (Traditional)</option>
+
+          <!-- Japanese -->
+          <option value="ja-JP">Japanese (Japan)</option>
+
+          <!-- Korean -->
+          <option value="ko-KR">Korean (South Korea)</option>
+
+          <!-- Hindi -->
+          <option value="hi-IN">Hindi (India)</option>
+
+          <!-- Dutch -->
+          <option value="nl-NL">Dutch (Netherlands)</option>
+          <option value="nl-BE">Dutch (Belgium)</option>
+
+          <!-- Swedish -->
+          <option value="sv-SE">Swedish (Sweden)</option>
+
+          <!-- Danish -->
+          <option value="da-DK">Danish (Denmark)</option>
+
+          <!-- Finnish -->
+          <option value="fi-FI">Finnish (Finland)</option>
+
+          <!-- Norwegian -->
+          <option value="no-NO">Norwegian (Norway)</option>
+
+          <!-- Greek -->
+          <option value="el-GR">Greek (Greece)</option>
+
+          <!-- Polish -->
+          <option value="pl-PL">Polish (Poland)</option>
+
+          <!-- Hungarian -->
+          <option value="hu-HU">Hungarian (Hungary)</option>
+
+          <!-- Turkish -->
+          <option value="tr-TR">Turkish (Turkey)</option>
+
+          <!-- Vietnamese -->
+          <option value="vi-VN">Vietnamese (Vietnam)</option>
+
+          <!-- Thai -->
+          <option value="th-TH">Thai (Thailand)</option>
+
+          <!-- Romanian -->
+          <option value="ro-RO">Romanian (Romania)</option>
+
+          <!-- Bengali -->
+          <option value="bn-IN">Bengali (India)</option>
+          <option value="bn-BD">Bengali (Bangladesh)</option>
+
+          <!-- Tamil -->
+          <option value="ta-IN">Tamil (India)</option>
+          <option value="ta-LK">Tamil (Sri Lanka)</option>
+
+          <!-- Telugu -->
+          <option value="te-IN">Telugu (India)</option>
+
+          <!-- Malayalam -->
+          <option value="ml-IN">Malayalam (India)</option>
+
+          <!-- Marathi -->
+          <option value="mr-IN">Marathi (India)</option>
+
+          <!-- Gujarati -->
+          <option value="gu-IN">Gujarati (India)</option>
+
+          <!-- Punjabi -->
+          <option value="pa-IN">Punjabi (India)</option>
+          <option value="pa-PK">Punjabi (Pakistan)</option>
+
+          <!-- Urdu -->
+          <option value="ur-IN">Urdu (India)</option>
+          <option value="ur-PK">Urdu (Pakistan)</option>
+
+          <!-- Indonesian -->
+          <option value="id-ID">Indonesian (Indonesia)</option>
+
+          <!-- Malay -->
+          <option value="ms-MY">Malay (Malaysia)</option>
+
+          <!-- Filipino -->
+          <option value="tl-PH">Filipino (Philippines)</option>
+
+          <!-- Japanese -->
+          <option value="ja-JP">Japanese (Japan)</option>
+
+          <!-- Swahili -->
+          <option value="sw-KE">Swahili (Kenya)</option>
+          <option value="sw-TZ">Swahili (Tanzania)</option>
+
+          <!-- Xhosa -->
+          <option value="xh-ZA">Xhosa (South Africa)</option>
+
+          <!-- Zulu -->
+          <option value="zu-ZA">Zulu (South Africa)</option>
+
+          <!-- Afrikaans -->
+          <option value="af-ZA">Afrikaans (South Africa)</option>
+
+          <!-- Czech -->
+          <option value="cs-CZ">Czech (Czech Republic)</option>
+
+          <!-- Slovak -->
+          <option value="sk-SK">Slovak (Slovakia)</option>
+
+          <!-- Croatian -->
+          <option value="hr-HR">Croatian (Croatia)</option>
+
+          <!-- Serbian -->
+          <option value="sr-RS">Serbian (Serbia)</option>
+
+          <!-- Lithuanian -->
+          <option value="lt-LT">Lithuanian (Lithuania)</option>
+
+          <!-- Latvian -->
+          <option value="lv-LV">Latvian (Latvia)</option>
+
+          <!-- Estonian -->
+          <option value="et-EE">Estonian (Estonia)</option>
+
+          <!-- Icelandic -->
+          <option value="is-IS">Icelandic (Iceland)</option>
+
+          <!-- Welsh -->
+          <option value="cy-GB">Welsh (United Kingdom)</option>
+        </select>
+        <button>Search</button>
+      </form>
+    <main>
+
+    <script>
+      // HTMLCollection: Logs all forms in the document
+console.log(document.forms);
+
+// HTMLCollection: Logs the first form in the document
+console.log(document.forms[0]);
+
+// NodeList: Logs all elements with the name "formGoogle"
+console.log(document.getElementsByName('formGoogle'));
+
+// Gets the first element with the name "q" and stores it in a variable
+const queryField = document.getElementsByName('q')[0];
+
+// Logs the 'q' input element stored in the queryField variable
+console.log(queryField);
+
+// Logs the form with the name or id "formGoogle"
+console.log(document.formGoogle);
+
+// Logs the input field with the name "q" within the "formGoogle" form
+console.log(document.formGoogle.q);
+
+// Logs the input field with the name "hl" within the "formGoogle" form
+console.log(document.formGoogle.hl);
+
+// Sets the value of the "hl" input field within the "formGoogle" form to 'no-NO'
+document.formGoogle.hl.value = 'no-NO';
+    </script>
+  </body>
+</html>

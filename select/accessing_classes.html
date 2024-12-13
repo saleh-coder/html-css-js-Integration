@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body id="exercise">
+    <div>class</div>
+    <script>
+      const div = document.querySelector('div');
+      const classes = div.classList;
+
+      classes.add('highlight');
+      classes.remove('highlight');
+      classes.toggle('highlight');
+
+      console.log(classes.contains('highlight'));
+      console.log(classes.lenght);
+
+      classes.add('highlight1');
+      classes.add('highlight2');
+      console.log(classes.length);
+
+      for (let classe of classes) {
+        console.log(classe);
+      }
+
+      classes.forEach((c) => console.log('forEach...', classes));
+      console.log([...classes]);
+    </script>
+  </body>
+</html>

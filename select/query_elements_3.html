@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body id="exercise">
+    <main>
+      <section>
+        <h2>Approved Candidates</h2>
+        <ul>
+          <!-- List of approved candidates -->
+          <li>Saul</li>
+          <li>Nora</li>
+          <li>Vivian</li>
+          <li>Luke</li>
+        </ul>
+
+        <h2>Rejected Candidates</h2>
+        <ul>
+          <!-- List of rejected candidates -->
+          <li>Claudia</li>
+          <li>Luana</li>
+          <li>Sabrina</li>
+          <li>Pedro</li>
+        </ul>
+      </section>
+    </main>
+
+    <script>
+      // Select the first <li> element from each list
+      const first = document.querySelectorAll(
+        'main > section ul li:nth-child(1)'
+      );
+      
+      // Log the content of the first <li> element in each list
+      first.forEach((no) => console.log(no.textContent)); 
+
+      // Modify the content of the first <li> element in each list, adding ">>> <<<"
+      first.forEach((no) => (no.textContent = `>>>${no.textContent}<<<`));
+
+      // Select all <li> elements from all lists
+      const allItems = document.querySelectorAll('main > section ul li');
+      
+      // Get the last item from the list
+      const lastItem = allItems[allItems.length - 1];
+
+      // Get the <ul> element that the last item belongs to
+      const rejectedList = lastItem.parentNode;
+
+      // Get the first item of the rejected candidates list
+      const firstItem = rejectedList.firstElementChild;
+
+      // Log the content of the last item
+      console.log(lastItem.textContent); 
+
+      // Log the <ul> element that contains the last item
+      console.log(lastItem.parentNode); 
+
+      // Log the parent <section> element of the <ul>
+      console.log(rejectedList.parentNode); 
+
+      // Log all child nodes of the <ul> element
+      console.log(lastItem.parentNode.childNodes);
+
+      // Log the first child element of the <ul> (which is the first <li>)
+      console.log(rejectedList.firstElementChild);
+
+      // Log the last child element of the <ul> (which is the last <li>)
+      console.log(rejectedList.lastElementChild);
+
+      // Log the next sibling of the first <li> (in the list of rejected candidates)
+      console.log(firstItem.nextSibling);
+
+      // Log the next element sibling of the first <li> (ignoring text nodes)
+      console.log(firstItem.nextElementSibling);
+    </script>
+  </body>
+</html>

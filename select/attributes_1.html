@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body id="exercise">
+    <div>
+      <a href="https://www.cod3r.com.br">Cod3r</a>
+    </div>
+
+    <div id="logo">
+      <img
+        src="http://files.cod3r.com.br/curso-web/logo-estreita.png"
+        alt="logo"
+      />
+    </div>
+    <script>
+      // Acesso aos atributos
+      const img = document.querySelector('img');
+      console.log('src #1', img.getAttribute('src')); // Acesso ao link da imagem
+      console.log('src #2', img.src); // Segunda forma de acesso ao link da imagem
+      console.log('src #3', img['src']); // Acessar atributo dentro de uma tag voltada para um array
+      console.log('alt', img.alt); // Acessando o atributo alt da imagem
+
+      console.log(img instanceof Node);
+      console.log('nodeType', img.nodeType);
+      console.log('nodeName', img.nodeName);
+
+      const link = document.querySelector('a');
+      console.log('text', link.firstChild.nodeType);
+      console.log('href', link.href);
+      link.firstChild.nodeValue = 'Site da cod3r';
+      link.innerHTML = 'Novo site da cod3r';
+    </script>
+  </body>
+</html>

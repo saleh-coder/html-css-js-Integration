@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body id="exercise">
+    <div id="first" class="first">#first</div>
+    <div id="second" class="highlight" highlight="1">#second</div>
+    <div id="third" half>#third</div>
+    <div id="forth" class="highlight" half="2">#forth</div>
+    <div id="fifth" class="last">#fifth</div>
+
+    <script>
+      // NodeList
+      function selectAll(selector) {
+        return document.querySelectorAll(selector);
+      }
+
+      selectAll('#first').forEach((el) => console.log(el));
+      console.log(selectAll('.first').lenght);
+      console.log(selectAll('.last').item(0));
+
+      selectAll('[half]').forEach((no) => {
+        console.log(no instanceof Node);
+        console.log(no.nodeName);
+        console.log(no.textContent);
+      });
+    </script>
+  </body>
+</html>

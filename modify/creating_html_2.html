@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/menu.css" />
+    <title>Creating HTML #1</title>
+  </head>
+  <body id="exercise">
+    <div>
+      <p>Initial Text</p>
+    </div>
+    <script>
+      const div = document.querySelector('div');
+      div.innerHTML = 'changed text';
+      // div.outerHTML = 'seconde changed text';
+
+      div.insertAdjacentHTML('beforebegin', '<p>Before begin<p>');
+      div.insertAdjacentHTML('afterbegin', '<p>After begin<p>');
+      div.insertAdjacentHTML('beforeend', '<p>Before end<p>');
+      div.insertAdjacentHTML('afterend', '<p>After end<p>');
+
+      console.log(div.innerHTML);
+      console.log(div.innerText);
+      console.log(div.outerHTML);
+    </script>
+  </body>
+</html>

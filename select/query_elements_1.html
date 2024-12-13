@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body id="exercise">
+    <div id="first" half="1">#first</div>
+    <div id="second" class="highlight">#second</div>
+    <div id="third" half>#third</div>
+    <div id="forth" class="highlight" half="2">#forth</div>
+    <div id="fifth" class="last">#fifth</div>
+
+    <script>
+      function selectOnlyOne(selector) {
+        const element = document.querySelector(selector);
+        console.log(element);
+      }
+
+      selectOnlyOne('#first'); // By ID
+      selectOnlyOne('.highlight'); // By Class
+      selectOnlyOne('.last'); // By Class
+      selectOnlyOne('[half]') // By Attribute
+      selectOnlyOne('[half="2"]') // By attribute = "2"
+    </script>
+  </body>
+</html>
